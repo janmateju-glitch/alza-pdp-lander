@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "name": "alza-pdp-content-system",
+  "builds": [
+    {
+      "src": "index.html",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
+}
