@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDP Content System | Alza × Outfindo</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        * { font-family: 'IBM Plex Sans', sans-serif; }
+        .mono { font-family: 'IBM Plex Mono', monospace; }
+        .outfindo-yellow { background-color: #FFDE00; }
+        .outfindo-dark { color: #343434; }
+        .outfindo-teal { background-color: #0BE5C1; }
+        .alza-green { background-color: #8BC34A; }
+        .alza-green-text { color: #8BC34A; }
+        .section-card { background: white; border-radius: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06); }
+        .param-row { border-bottom: 1px solid #f3f4f6; }
+        .param-row:last-child { border-bottom: none; }
+        .badge { padding: 4px 10px; border-radius: 6px; font-size: 12px; font-weight: 500; }
+        .badge-green { background: #dcfce7; color: #166534; }
+        .badge-blue { background: #dbeafe; color: #1e40af; }
+        .badge-amber { background: #fef3c7; color: #92400e; }
+        .badge-purple { background: #f3e8ff; color: #7c3aed; }
+        .badge-pink { background: #fce7f3; color: #be185d; }
+        .badge-teal { background: #ccfbf1; color: #0f766e; }
+        .badge-gray { background: #f3f4f6; color: #374151; }
+        .badge-red { background: #fee2e2; color: #991b1b; }
+        .tab-btn { transition: all 0.2s; }
+        .tab-btn.active { border-bottom: 3px solid #8BC34A; color: #343434; font-weight: 600; background: #f0fdf4; }
+        .tab-btn:not(.active) { border-bottom: 3px solid transparent; color: #6b7280; }
+        .tab-btn:not(.active):hover { background: #f9fafb; }
+        .feature-chip { display: inline-flex; align-items: center; gap: 4px; padding: 6px 12px; background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; font-size: 13px; }
+        .feature-chip.active { background: #dcfce7; border-color: #86efac; color: #166534; }
+        .section-header { padding: 12px 20px; border-bottom: 1px solid #e5e7eb; display: flex; align-items: center; gap: 10px; }
+        .section-icon { width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 16px; }
+        .product-panel { display: none; }
+        .product-panel.active { display: block; }
+    </style>
+</head>
+<body class="bg-gray-50 outfindo-dark">
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <div class="outfindo-yellow px-3 py-1.5 rounded-lg font-bold text-sm">OUTFINDO</div>
+                    <span class="text-gray-300">×</span>
+                    <div class="alza-green text-white px-3 py-1.5 rounded-lg font-bold text-sm">ALZA</div>
+                    <span class="text-xs text-gray-400 ml-2 hidden sm:inline">via boost.space connected database integration</span>
+                </div>
+                <div class="text-right">
+                    <h1 class="text-lg font-semibold">PDP Content System</h1>
+                    <p class="text-xs text-gray-500">Strukturovaná data + Obsahové bloky</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="bg-white border-b sticky top-[72px] z-40">
+        <div class="max-w-7xl mx-auto px-6">
+            <nav class="flex gap-1">
+                <button onclick="showProduct('washing')" id="tab-washing" class="tab-btn active py-4 px-5 text-sm">🧺 Pračky</button>
+                <button onclick="showProduct('dogfood')" id="tab-dogfood" class="tab-btn py-4 px-5 text-sm">🐕 Granule pro psy</button>
+                <button onclick="showProduct('tv')" id="tab-tv" class="tab-btn py-4 px-5 text-sm">📺 Televize</button>
+            </nav>
+        </div>
+    </div>
+    <main class="max-w-7xl mx-auto px-6 py-8">
+        <div id="product-washing" class="product-panel active">
+            <div class="section-card p-8 mb-8">
+                <div class="flex flex-col lg:flex-row gap-8">
+                    <div class="lg:w-1/3">
+                        <div class="bg-gradient-to-br from-gray-100 to-gray-50 rounded-2xl p-8 flex items-center justify-center aspect-square">
+                            <div class="text-center"><div class="text-8xl mb-4">🧺</div><p class="text-gray-400 font-medium">LG FA49V5VW1W</p></div>
+                        </div>
+                    </div>
+                    <div class="lg:w-2/3">
+                        <div class="flex flex-wrap items-center gap-2 mb-3">
+                            <span class="badge badge-green">✓ Skladem</span>
+                            <span class="text-yellow-500 text-lg">★★★★★</span>
+                            <span class="text-sm text-gray-500">4.7 (174 hodnocení)</span>
+                        </div>
+                        <h1 class="text-3xl font-bold mb-3">LG FA49V5VW1W – Parní pračka</h1>
+                        <p class="text-gray-600 mb-4 leading-relaxed">Prémiová automatická pračka s předním plněním, vybavená invertorový motorem s přímým pohonem a parní technologií Steam pro hloubkové čištění.</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="badge badge-green">Energetická třída A</span>
+                            <span class="badge badge-blue">9 kg kapacita</span>
+                            <span class="badge badge-purple">Parní program</span>
+                            <span class="badge badge-amber">Invertorový motor</span>
+                            <span class="badge badge-teal">Wi-Fi připojení</span>
+                        </div>
+                        <div class="flex items-baseline gap-3">
+                            <span class="text-4xl font-bold alza-green-text">13 990 Kč</span>
+                            <span class="text-lg text-gray-400 line-through">15 490 Kč</span>
+                            <span class="badge badge-green">-10%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center text-gray-500 py-8">[Full washing machine content - see deployed version]</p>
+        </div>
+        <div id="product-dogfood" class="product-panel">
+            <div class="section-card p-8 mb-8">
+                <div class="flex flex-col lg:flex-row gap-8">
+                    <div class="lg:w-1/3">
+                        <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-8 flex items-center justify-center aspect-square">
+                            <div class="text-center"><div class="text-8xl mb-4">🐕</div><p class="text-gray-400 font-medium">Pro Plan Medium</p></div>
+                        </div>
+                    </div>
+                    <div class="lg:w-2/3">
+                        <div class="flex flex-wrap items-center gap-2 mb-3">
+                            <span class="badge badge-green">✓ Skladem</span>
+                            <span class="text-yellow-500 text-lg">★★★★★</span>
+                            <span class="text-sm text-gray-500">4.8 hodnocení</span>
+                        </div>
+                        <h1 class="text-3xl font-bold mb-3">Pro Plan Medium Sensitive Digestion</h1>
+                        <p class="text-gray-600 mb-4 leading-relaxed">Prémiové granule s jehněčím pro dospělé psy středních plemen s citlivým trávením.</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="badge badge-green">Citlivé trávení</span>
+                            <span class="badge badge-blue">Střední plemena 10-25 kg</span>
+                            <span class="badge badge-purple">Jehněčí maso</span>
+                            <span class="badge badge-amber">14 kg balení</span>
+                        </div>
+                        <div class="flex items-baseline gap-3">
+                            <span class="text-4xl font-bold alza-green-text">1 479 Kč</span>
+                            <span class="text-sm text-gray-500">(105 Kč/kg)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center text-gray-500 py-8">[Full dog food content - see deployed version]</p>
+        </div>
+        <div id="product-tv" class="product-panel">
+            <div class="section-card p-8 mb-8">
+                <div class="flex flex-col lg:flex-row gap-8">
+                    <div class="lg:w-1/3">
+                        <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 flex items-center justify-center aspect-square">
+                            <div class="text-center"><div class="text-8xl mb-4">📺</div><p class="text-gray-400 font-medium">Samsung QE85Q8F</p></div>
+                        </div>
+                    </div>
+                    <div class="lg:w-2/3">
+                        <div class="flex flex-wrap items-center gap-2 mb-3">
+                            <span class="badge badge-green">✓ Skladem > 5 ks</span>
+                            <span class="text-yellow-500 text-lg">★★★★★</span>
+                            <span class="text-sm text-gray-500">4.8 (4 hodnocení)</span>
+                        </div>
+                        <h1 class="text-3xl font-bold mb-3">85" Samsung QE85Q8F – QLED 4K Smart TV</h1>
+                        <p class="text-gray-600 mb-4 leading-relaxed">Prémiová velkoformátová QLED televize s technologií Quantum Dot.</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="badge badge-green">QLED 4K</span>
+                            <span class="badge badge-blue">85" / 215 cm</span>
+                            <span class="badge badge-purple">HDR10+</span>
+                            <span class="badge badge-amber">Game Mode + VRR</span>
+                        </div>
+                        <div class="flex items-baseline gap-3">
+                            <span class="text-4xl font-bold alza-green-text">37 047 Kč</span>
+                            <span class="text-lg text-gray-400 line-through">41 986 Kč</span>
+                            <span class="badge badge-green">-11%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center text-gray-500 py-8">[Full TV content - see deployed version]</p>
+        </div>
+        <div class="section-card p-6 mt-12">
+            <div class="text-center mb-6">
+                <h3 class="font-bold text-lg">PDP Content System Statistics</h3>
+                <p class="text-sm text-gray-500">Powered by Outfindo Research × boost.space Integration</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-4 text-center">
+                <div><p class="text-3xl font-bold alza-green-text">3</p><p class="text-xs text-gray-500">Produkty</p></div>
+                <div><p class="text-3xl font-bold text-purple-600">47+</p><p class="text-xs text-gray-500">Parametrů / produkt</p></div>
+                <div><p class="text-3xl font-bold text-blue-600">7</p><p class="text-xs text-gray-500">Datových vrstev</p></div>
+                <div><p class="text-3xl font-bold text-amber-600">7</p><p class="text-xs text-gray-500">Obsahových bloků</p></div>
+                <div><p class="text-3xl font-bold text-teal-600">∞</p><p class="text-xs text-gray-500">LLM-ready</p></div>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-white border-t mt-12 py-8">
+        <div class="max-w-7xl mx-auto px-6 text-center text-gray-500">
+            <div class="flex items-center justify-center gap-3 mb-3">
+                <span class="outfindo-yellow px-2 py-1 rounded font-bold text-xs outfindo-dark">OUTFINDO</span>
+                <span class="text-gray-300">×</span>
+                <span class="alza-green text-white px-2 py-1 rounded font-bold text-xs">ALZA</span>
+            </div>
+            <p class="text-sm">PDP Content System – Strukturovaná data + Obsahové bloky pro LLM discoverability</p>
+            <p class="text-xs text-gray-400 mt-1">via boost.space connected database integration</p>
+        </div>
+    </footer>
+    <script>
+        function showProduct(product) {
+            document.querySelectorAll('.product-panel').forEach(p => p.classList.remove('active'));
+            document.getElementById('product-' + product).classList.add('active');
+            document.querySelectorAll('.tab-btn').forEach(t => t.classList.remove('active'));
+            document.getElementById('tab-' + product).classList.add('active');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
