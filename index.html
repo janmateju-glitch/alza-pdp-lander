@@ -39,6 +39,7 @@
     </style>
 </head>
 <body class="bg-gray-50 outfindo-dark">
+    <!-- Header -->
     <header class="bg-white shadow-sm sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
@@ -55,22 +56,37 @@
             </div>
         </div>
     </header>
+
+    <!-- Product Tabs -->
     <div class="bg-white border-b sticky top-[72px] z-40">
         <div class="max-w-7xl mx-auto px-6">
             <nav class="flex gap-1">
-                <button onclick="showProduct('washing')" id="tab-washing" class="tab-btn active py-4 px-5 text-sm">🧺 Pračky</button>
-                <button onclick="showProduct('dogfood')" id="tab-dogfood" class="tab-btn py-4 px-5 text-sm">🐕 Granule pro psy</button>
-                <button onclick="showProduct('tv')" id="tab-tv" class="tab-btn py-4 px-5 text-sm">📺 Televize</button>
+                <button onclick="showProduct('washing')" id="tab-washing" class="tab-btn active py-4 px-5 text-sm">
+                    🧺 Pračky
+                </button>
+                <button onclick="showProduct('dogfood')" id="tab-dogfood" class="tab-btn py-4 px-5 text-sm">
+                    🐕 Granule pro psy
+                </button>
+                <button onclick="showProduct('tv')" id="tab-tv" class="tab-btn py-4 px-5 text-sm">
+                    📺 Televize
+                </button>
             </nav>
         </div>
     </div>
+
     <main class="max-w-7xl mx-auto px-6 py-8">
+
+        <!-- ==================== WASHING MACHINE ==================== -->
         <div id="product-washing" class="product-panel active">
+            <!-- Product Hero -->
             <div class="section-card p-8 mb-8">
                 <div class="flex flex-col lg:flex-row gap-8">
                     <div class="lg:w-1/3">
                         <div class="bg-gradient-to-br from-gray-100 to-gray-50 rounded-2xl p-8 flex items-center justify-center aspect-square">
-                            <div class="text-center"><div class="text-8xl mb-4">🧺</div><p class="text-gray-400 font-medium">LG FA49V5VW1W</p></div>
+                            <div class="text-center">
+                                <div class="text-8xl mb-4">🧺</div>
+                                <p class="text-gray-400 font-medium">LG FA49V5VW1W</p>
+                            </div>
                         </div>
                     </div>
                     <div class="lg:w-2/3">
@@ -80,7 +96,9 @@
                             <span class="text-sm text-gray-500">4.7 (174 hodnocení)</span>
                         </div>
                         <h1 class="text-3xl font-bold mb-3">LG FA49V5VW1W – Parní pračka</h1>
-                        <p class="text-gray-600 mb-4 leading-relaxed">Prémiová automatická pračka s předním plněním, vybavená invertorový motorem s přímým pohonem a parní technologií Steam pro hloubkové čištění.</p>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            Prémiová automatická pračka s předním plněním, vybavená invertorový motorem s přímým pohonem a parní technologií Steam pro hloubkové čištění. Ideální pro náročné domácnosti hledající kombinaci úspory energie, tichého provozu a šetrného praní.
+                        </p>
                         <div class="flex flex-wrap gap-2 mb-6">
                             <span class="badge badge-green">Energetická třída A</span>
                             <span class="badge badge-blue">9 kg kapacita</span>
@@ -96,14 +114,299 @@
                     </div>
                 </div>
             </div>
-            <p class="text-center text-gray-500 py-8">[Full washing machine content - see deployed version]</p>
+
+            <div class="grid lg:grid-cols-2 gap-8">
+                <!-- LEFT: Structured Data -->
+                <div class="space-y-6">
+                    <h2 class="text-xl font-bold flex items-center gap-2">📊 Strukturovaná data produktu</h2>
+
+                    <!-- Basic Info -->
+                    <div class="section-card overflow-hidden">
+                        <div class="section-header bg-amber-50">
+                            <span class="section-icon bg-amber-100">🏷️</span>
+                            <h3 class="font-semibold">Základní informace</h3>
+                        </div>
+                        <div class="divide-y divide-gray-100">
+                            <div class="param-row px-5 py-3 flex justify-between"><span class="text-gray-600">Výrobce</span><span class="font-medium">LG</span></div>
+                            <div class="param-row px-5 py-3 flex justify-between"><span class="text-gray-600">Model</span><span class="font-medium mono text-sm">FA49V5VW1W</span></div>
+                            <div class="param-row px-5 py-3 flex justify-between"><span class="text-gray-600">Barva</span><span class="font-medium">Bílá</span></div>
+                            <div class="param-row px-5 py-3 flex justify-between"><span class="text-gray-600">Rok uvedení</span><span class="font-medium">2024</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Household Fit -->
+                    <div class="section-card overflow-hidden">
+                        <div class="section-header bg-blue-50">
+                            <span class="section-icon bg-blue-100">🏠</span>
+                            <h3 class="font-semibold">Pro jakou domácnost</h3>
+                        </div>
+                        <div class="divide-y divide-gray-100">
+                            <div class="param-row px-5 py-3 flex justify-between items-center"><span class="text-gray-600">Velikost domácnosti</span><span class="badge badge-blue">Pro rodinu (7–9 kg)</span></div>
+                            <div class="param-row px-5 py-3 flex justify-between items-center"><span class="text-gray-600">Úspornost energie</span><span class="badge badge-green">Velmi úsporné</span></div>
+                            <div class="param-row px-5 py-3 flex justify-between items-center"><span class="text-gray-600">Úspornost vody</span><span class="badge badge-green">Úsporné (50 l/cyklus)</span></div>
+                            <div class="param-row px-5 py-3 flex justify-between items-center"><span class="text-gray-600">Úroveň hluku</span><span class="badge badge-teal">Tiché (53 dB)</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Key Performance -->
+                    <div class="section-card overflow-hidden">
+                        <div class="section-header bg-green-50">
+                            <span class="section-icon bg-green-100">⚡</span>
+                            <h3 class="font-semibold">Klíčové parametry výkonu</h3>
+                        </div>
+                        <div class="divide-y divide-gray-100">
+                            <div class="param-row px-5 py-3 flex justify-between items-center"><span class="text-gray-600">Energetická třída</span><span class="badge badge-green font-bold">A</span></div>
+                            <div class="param-row px-5 py-3 flex justify-between items-center"><span class="text-gray-600">Účinnost pracího výkonu</span><span class="badge badge-green">A</span></div>
+                            <div class="param-row px-5 py-3 flex justify-between items-center"><span class="text-gray-600">Třída odstřeďování</span><span class="badge badge-blue">B</span></div>
+                            <div class="param-row px-5 py-3 flex justify-between"><span class="text-gray-600">Maximální náplň</span><span class="font-medium">9 kg</span></div>
+                            <div class="param-row px-5 py-3 flex justify-between"><span class="text-gray-600">Počet otáček</span><span class="font-medium">1400 ot./min</span></div>
+                            <div class="param-row px-5 py-3 flex justify-between"><span class="text-gray-600">Spotřeba energie (100 cyklů)</span><span class="font-medium">50 kWh</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Features -->
+                    <div class="section-card overflow-hidden">
+                        <div class="section-header bg-purple-50">
+                            <span class="section-icon bg-purple-100">✨</span>
+                            <h3 class="font-semibold">Funkce a vybavení</h3>
+                        </div>
+                        <div class="divide-y divide-gray-100">
+                            <div class="param-row px-5 py-3 flex justify-between items-center"><span class="text-gray-600">Motor</span><span class="badge badge-purple">Invertorový Direct Drive</span></div>
+                            <div class="param-row px-5 py-3 flex justify-between items-center"><span class="text-gray-600">Ovládání</span><span class="badge badge-blue">Dotykové + mechanické</span></div>
+                            <div class="param-row px-5 py-3 flex justify-between"><span class="text-gray-600">Počet programů</span><span class="font-medium">14</span></div>
+                        </div>
+                        <div class="px-5 py-4 border-t bg-gray-50">
+                            <p class="text-sm text-gray-500 mb-3">Dostupné funkce:</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="feature-chip active">✓ Parní praní</span>
+                                <span class="feature-chip active">✓ Wi-Fi</span>
+                                <span class="feature-chip active">✓ AI detekce</span>
+                                <span class="feature-chip active">✓ Dětská pojistka</span>
+                                <span class="feature-chip active">✓ Aqua Stop</span>
+                                <span class="feature-chip active">✓ Odložený start</span>
+                                <span class="feature-chip active">✓ Přidání prádla</span>
+                                <span class="feature-chip active">✓ Program pro alergiky</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Physical Specs -->
+                    <div class="section-card overflow-hidden">
+                        <div class="section-header bg-gray-100">
+                            <span class="section-icon bg-gray-200">📐</span>
+                            <h3 class="font-semibold">Rozměry a instalace</h3>
+                        </div>
+                        <div class="divide-y divide-gray-100">
+                            <div class="param-row px-5 py-3 flex justify-between"><span class="text-gray-600">Rozměry (Š × V × H)</span><span class="font-medium">60 × 85 × 56 cm</span></div>
+                            <div class="param-row px-5 py-3 flex justify-between"><span class="text-gray-600">Hmotnost</span><span class="font-medium">70 kg</span></div>
+                            <div class="param-row px-5 py-3 flex justify-between items-center"><span class="text-gray-600">Způsob plnění</span><span class="badge badge-gray">Přední</span></div>
+                            <div class="param-row px-5 py-3 flex justify-between items-center"><span class="text-gray-600">Umístění</span><span class="badge badge-gray">Volně stojící</span></div>
+                            <div class="param-row px-5 py-3 flex justify-between"><span class="text-gray-600">Objem bubnu</span><span class="font-medium">56 l</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT: Content Blocks -->
+                <div class="space-y-6">
+                    <h2 class="text-xl font-bold flex items-center gap-2">📝 Obsahové bloky</h2>
+
+                    <!-- About Product -->
+                    <div class="section-card overflow-hidden">
+                        <div class="section-header bg-gray-800 text-white">
+                            <span class="section-icon bg-gray-700 text-white">📋</span>
+                            <h3 class="font-semibold">O produktu</h3>
+                        </div>
+                        <div class="p-5">
+                            <p class="leading-relaxed text-gray-700">
+                                <strong>LG FA49V5VW1W</strong> je prémiová automatická pračka s předním plněním, která kombinuje pokročilou technologii praní s maximální úsporností. Vybavena invertorový motorem s přímým pohonem (Direct Drive) a inovativní parní technologií Steam, nabízí důkladné a zároveň šetrné praní pro celou rodinu.
+                            </p>
+                            <p class="leading-relaxed text-gray-700 mt-3">
+                                S kapacitou 9 kg a energetickou třídou A představuje optimální volbu pro rodiny, které chtějí snížit spotřebu energie i vody bez kompromisů v kvalitě praní.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Best For -->
+                    <div class="section-card overflow-hidden">
+                        <div class="section-header bg-gray-800 text-white">
+                            <span class="section-icon bg-gray-700 text-white">👤</span>
+                            <h3 class="font-semibold">Komu se hodí</h3>
+                        </div>
+                        <div class="p-5 space-y-4">
+                            <div class="border-l-4 border-green-400 pl-4">
+                                <p class="font-semibold text-green-700 mb-2">✓ Ideální pro:</p>
+                                <ul class="space-y-2 text-gray-700 text-sm">
+                                    <li>• <strong>Rodiny s 3–5 členy</strong> – kapacita 9 kg zvládne i větší množství prádla najednou</li>
+                                    <li>• <strong>Rodiče malých dětí</strong> – parní hygienizace eliminuje bakterie z dětského oblečení</li>
+                                    <li>• <strong>Alergiky</strong> – program pro alergiky a parní ošetření bez agresivních chemikálií</li>
+                                    <li>• <strong>Tech-savvy uživatele</strong> – Wi-Fi připojení, ovládání přes aplikaci LG ThinQ</li>
+                                    <li>• <strong>Ekologicky smýšlející</strong> – třída A a nízká spotřeba šetří peníze i planetu</li>
+                                </ul>
+                            </div>
+                            <div class="border-l-4 border-amber-400 pl-4">
+                                <p class="font-semibold text-amber-700 mb-2">⚠ Méně vhodné pro:</p>
+                                <ul class="space-y-2 text-gray-700 text-sm">
+                                    <li>• <strong>Malé byty</strong> – standardní rozměry 60×85×56 cm vyžadují dostatek místa</li>
+                                    <li>• <strong>Jednočlenné domácnosti</strong> – kapacita 9 kg je předimenzovaná</li>
+                                    <li>• <strong>Vestavné instalace</strong> – model je určen jako volně stojící</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- How It Works -->
+                    <div class="section-card overflow-hidden">
+                        <div class="section-header bg-gray-800 text-white">
+                            <span class="section-icon bg-gray-700 text-white">⚙️</span>
+                            <h3 class="font-semibold">Jak to funguje</h3>
+                        </div>
+                        <div class="p-5 space-y-5">
+                            <div>
+                                <h4 class="font-semibold text-purple-700 mb-2">🔄 Invertorový motor s přímým pohonem</h4>
+                                <p class="text-gray-700 text-sm leading-relaxed">Direct Drive motor je přímo připojen k bubnu – eliminuje vibrace a hluk. Výsledkem je tišší provoz a životnost až 20 let s 10letou zárukou na motor.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-purple-700 mb-2">💨 Parní technologie Steam</h4>
+                                <p class="text-gray-700 text-sm leading-relaxed">Pára o teplotě 100°C proniká hluboko do vláken a uvolňuje zašlé skvrny. Eliminuje až 99.9% bakterií a alergenů bez nutnosti vysokých teplot.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-purple-700 mb-2">🧠 AI Direct Drive™</h4>
+                                <p class="text-gray-700 text-sm leading-relaxed">Senzory analyzují hmotnost a typ tkaniny. AI automaticky vybere optimální kombinaci z 6 pohybů bubnu pro nejlepší výsledek.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-purple-700 mb-2">📱 Smart ThinQ připojení</h4>
+                                <p class="text-gray-700 text-sm leading-relaxed">Ovládejte pračku odkudkoli přes aplikaci LG ThinQ. Kompatibilní s Google Home i Alexa.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- What's Inside -->
+                    <div class="section-card overflow-hidden">
+                        <div class="section-header bg-gray-800 text-white">
+                            <span class="section-icon bg-gray-700 text-white">🔧</span>
+                            <h3 class="font-semibold">Co je uvnitř</h3>
+                        </div>
+                        <div class="p-5">
+                            <div class="grid grid-cols-2 gap-3">
+                                <div class="bg-gray-50 rounded-lg p-3">
+                                    <p class="text-xs text-gray-500">Buben</p>
+                                    <p class="font-medium text-sm">Nerezová ocel, 56 l</p>
+                                </div>
+                                <div class="bg-gray-50 rounded-lg p-3">
+                                    <p class="text-xs text-gray-500">Motor</p>
+                                    <p class="font-medium text-sm">Invertorový Direct Drive</p>
+                                </div>
+                                <div class="bg-gray-50 rounded-lg p-3">
+                                    <p class="text-xs text-gray-500">Parní systém</p>
+                                    <p class="font-medium text-sm">Steam Technology</p>
+                                </div>
+                                <div class="bg-gray-50 rounded-lg p-3">
+                                    <p class="text-xs text-gray-500">Displej</p>
+                                    <p class="font-medium text-sm">LED dotykový panel</p>
+                                </div>
+                                <div class="bg-gray-50 rounded-lg p-3">
+                                    <p class="text-xs text-gray-500">Konektivita</p>
+                                    <p class="font-medium text-sm">Wi-Fi, LG ThinQ</p>
+                                </div>
+                                <div class="bg-gray-50 rounded-lg p-3">
+                                    <p class="text-xs text-gray-500">Bezpečnost</p>
+                                    <p class="font-medium text-sm">Aqua Stop, dětská pojistka</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Differentiators -->
+                    <div class="section-card overflow-hidden">
+                        <div class="section-header bg-gray-800 text-white">
+                            <span class="section-icon bg-gray-700 text-white">🏆</span>
+                            <h3 class="font-semibold">Čím se odlišuje</h3>
+                        </div>
+                        <div class="p-5 space-y-4">
+                            <div class="flex gap-3 items-start">
+                                <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center text-lg flex-shrink-0">🏆</div>
+                                <div>
+                                    <p class="font-semibold text-sm">Nejlepší energetická třída A</p>
+                                    <p class="text-xs text-gray-600">Pouze 50 kWh/100 cyklů – ročně ušetříte až 800 Kč na elektřině.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-3 items-start">
+                                <div class="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center text-lg flex-shrink-0">💨</div>
+                                <div>
+                                    <p class="font-semibold text-sm">Parní hygienizace bez kompromisů</p>
+                                    <p class="text-xs text-gray-600">Jediná v cenové kategorii do 15 000 Kč s plnohodnotným parním systémem.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-3 items-start">
+                                <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center text-lg flex-shrink-0">🤫</div>
+                                <div>
+                                    <p class="font-semibold text-sm">Tichý provoz i v noci</p>
+                                    <p class="text-xs text-gray-600">53 dB = běžný rozhovor. Ideální pro noční praní v bytových domech.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-3 items-start">
+                                <div class="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center text-lg flex-shrink-0">🛡️</div>
+                                <div>
+                                    <p class="font-semibold text-sm">10 let záruka na motor</p>
+                                    <p class="text-xs text-gray-600">5× delší záruka než standard – důkaz kvality invertorového motoru.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- How to Use -->
+                    <div class="section-card overflow-hidden">
+                        <div class="section-header bg-gray-800 text-white">
+                            <span class="section-icon bg-gray-700 text-white">📖</span>
+                            <h3 class="font-semibold">Jak používat</h3>
+                        </div>
+                        <div class="p-5 space-y-3">
+                            <div class="flex gap-3"><span class="w-6 h-6 bg-gray-100 rounded-full flex items-center justify-center text-xs font-bold text-gray-500 flex-shrink-0">1</span><div><p class="font-medium text-sm">Naplňte buben</p><p class="text-xs text-gray-600">Max. 9 kg, Add Item umožňuje přidat prádlo i během cyklu</p></div></div>
+                            <div class="flex gap-3"><span class="w-6 h-6 bg-gray-100 rounded-full flex items-center justify-center text-xs font-bold text-gray-500 flex-shrink-0">2</span><div><p class="font-medium text-sm">Přidejte prací prostředek</p><p class="text-xs text-gray-600">Dávkovač na prášek/gel podle tvrdosti vody</p></div></div>
+                            <div class="flex gap-3"><span class="w-6 h-6 bg-gray-100 rounded-full flex items-center justify-center text-xs font-bold text-gray-500 flex-shrink-0">3</span><div><p class="font-medium text-sm">Zvolte program</p><p class="text-xs text-gray-600">14 programů: Bavlna, Syntetika, Alergik, Dětské prádlo, Rychlé 30'...</p></div></div>
+                            <div class="flex gap-3"><span class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center text-xs font-bold text-green-600 flex-shrink-0">▶</span><div><p class="font-medium text-sm">Spusťte praní</p><p class="text-xs text-gray-600">AI optimalizuje cyklus. Sledujte v aplikaci LG ThinQ.</p></div></div>
+                        </div>
+                    </div>
+
+                    <!-- Safety -->
+                    <div class="section-card overflow-hidden">
+                        <div class="section-header bg-gray-800 text-white">
+                            <span class="section-icon bg-gray-700 text-white">⚠️</span>
+                            <h3 class="font-semibold">Bezpečnost a údržba</h3>
+                        </div>
+                        <div class="p-5 space-y-3">
+                            <div class="bg-red-50 border border-red-100 rounded-lg p-3">
+                                <p class="font-semibold text-red-700 text-sm mb-1">Bezpečnostní upozornění</p>
+                                <ul class="text-xs text-gray-700 space-y-1">
+                                    <li>• Nezapínejte s poškozeným kabelem</li>
+                                    <li>• Nedovolte dětem vlézt do bubnu</li>
+                                    <li>• Max. teplota přívodu vody: 25°C</li>
+                                </ul>
+                            </div>
+                            <div class="bg-green-50 border border-green-100 rounded-lg p-3">
+                                <p class="font-semibold text-green-700 text-sm mb-1">Záruka</p>
+                                <ul class="text-xs text-gray-700 space-y-1">
+                                    <li>• Celý přístroj: <strong>2 roky</strong></li>
+                                    <li>• Invertorový motor: <strong>10 let</strong></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+
+        <!-- ==================== DOG FOOD ==================== -->
         <div id="product-dogfood" class="product-panel">
+            <!-- Product Hero -->
             <div class="section-card p-8 mb-8">
                 <div class="flex flex-col lg:flex-row gap-8">
                     <div class="lg:w-1/3">
                         <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-8 flex items-center justify-center aspect-square">
-                            <div class="text-center"><div class="text-8xl mb-4">🐕</div><p class="text-gray-400 font-medium">Pro Plan Medium</p></div>
+                            <div class="text-center">
+                                <div class="text-8xl mb-4">🐕</div>
+                                <p class="text-gray-400 font-medium">Pro Plan Medium</p>
+                            </div>
                         </div>
                     </div>
                     <div class="lg:w-2/3">
@@ -113,12 +416,15 @@
                             <span class="text-sm text-gray-500">4.8 hodnocení</span>
                         </div>
                         <h1 class="text-3xl font-bold mb-3">Pro Plan Medium Sensitive Digestion</h1>
-                        <p class="text-gray-600 mb-4 leading-relaxed">Prémiové granule s jehněčím pro dospělé psy středních plemen s citlivým trávením.</p>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            Prémiové granule s jehněčím pro dospělé psy středních plemen s citlivým trávením. Speciální OPTIDIGEST formule s prebiotiky pro zdravou střevní mikroflóru a snadné trávení. Bez pšenice a sóji.
+                        </p>
                         <div class="flex flex-wrap gap-2 mb-6">
                             <span class="badge badge-green">Citlivé trávení</span>
                             <span class="badge badge-blue">Střední plemena 10-25 kg</span>
                             <span class="badge badge-purple">Jehněčí maso</span>
                             <span class="badge badge-amber">14 kg balení</span>
+                            <span class="badge badge-teal">OPTIDIGEST</span>
                         </div>
                         <div class="flex items-baseline gap-3">
                             <span class="text-4xl font-bold alza-green-text">1 479 Kč</span>
@@ -127,14 +433,289 @@
                     </div>
                 </div>
             </div>
-            <p class="text-center text-gray-500 py-8">[Full dog food content - see deployed version]</p>
+
+            <div class="grid lg:grid-cols-2 gap-8">
+                <!-- LEFT: Structured Data -->
+                <div class="space-y-6">
+                    <h2 class="text-xl font-bold flex items-center gap-2">📊 Strukturovaná data produktu</h2>
+
+                    <!-- Basic Info -->
+                    <div class="section-card overflow-hidden">
+                        <div class="section-header bg-amber-50">
+                            <span class="section-icon bg-amber-100">🏷️</span>
+                            <h3 class="font-semibold">Základní informace</h3>
+                        </div>
+                        <div class="divide-y divide-gray-100">
+                            <div class="param-row px-5 py-3 flex justify-between"><span class="text-gray-600">Značka</span><span class="font-medium">Purina Pro Plan</span></div>
+                            <div class="param-row px-5 py-3 flex justify-between"><span class="text-gray-600">Řada</span><span class="font-medium">Medium Sensitive Digestion</span></div>
+                            <div class="param-row px-5 py-3 flex justify-between"><span class="text-gray-600">Hmotnost balení</span><span class="font-medium">14 kg</span></div>
+                            <div class="param-row px-5 py-3 flex justify-between"><span class="text-gray-600">Hlavní příchuť</span><span class="font-medium">Jehněčí</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Target Dog -->
+                    <div class="section-card overflow-hidden">
+                        <div class="section-header bg-blue-50">
+                            <span class="section-icon bg-blue-100">🐕</span>
+                            <h3 class="font-semibold">Pro jakého psa</h3>
+                        </div>
+                        <div class="divide-y divide-gray-100">
+                            <div class="param-row px-5 py-3 flex justify-between items-center"><span class="text-gray-600">Velikost plemene</span><span class="badge badge-blue">Střední (10-25 kg)</span></div>
+                            <div class="param-row px-5 py-3 flex justify-between items-center"><span class="text-gray-600">Věk psa</span><span class="badge badge-purple">Dospělý (1-7 let)</span></div>
+                            <div class="param-row px-5 py-3 flex justify-between items-center"><span class="text-gray-600">Specifické potřeby</span><span class="badge badge-green">Citlivé trávení</span></div>
+                            <div class="param-row px-5 py-3 flex justify-between items-center"><span class="text-gray-600">Aktivita</span><span class="badge badge-gray">Normální</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Nutritional Values -->
+                    <div class="section-card overflow-hidden">
+                        <div class="section-header bg-green-50">
+                            <span class="section-icon bg-green-100">🥩</span>
+                            <h3 class="font-semibold">Nutriční hodnoty</h3>
+                        </div>
+                        <div class="divide-y divide-gray-100">
+                            <div class="param-row px-5 py-3 flex justify-between"><span class="text-gray-600">Bílkoviny</span><span class="font-medium font-bold">26%</span></div>
+                            <div class="param-row px-5 py-3 flex justify-between"><span class="text-gray-600">Tuky</span><span class="font-medium">16%</span></div>
+                            <div class="param-row px-5 py-3 flex justify-between"><span class="text-gray-600">Vláknina</span><span class="font-medium">3%</span></div>
+                            <div class="param-row px-5 py-3 flex justify-between"><span class="text-gray-600">Popel</span><span class="font-medium">7.5%</span></div>
+                            <div class="param-row px-5 py-3 flex justify-between"><span class="text-gray-600">Omega-3</span><span class="font-medium">0.3%</span></div>
+                            <div class="param-row px-5 py-3 flex justify-between"><span class="text-gray-600">Omega-6</span><span class="font-medium">2.0%</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Composition -->
+                    <div class="section-card overflow-hidden">
+                        <div class="section-header bg-purple-50">
+                            <span class="section-icon bg-purple-100">📋</span>
+                            <h3 class="font-semibold">Složení</h3>
+                        </div>
+                        <div class="p-5">
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="badge badge-green">✓ Jehněčí #1</span>
+                                <span class="badge badge-green">✓ Rýže</span>
+                                <span class="badge badge-teal">✓ Prebiotika</span>
+                                <span class="badge badge-blue">✓ Omega mastné kyseliny</span>
+                            </div>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="badge badge-red">✗ Bez pšenice</span>
+                                <span class="badge badge-red">✗ Bez sóji</span>
+                                <span class="badge badge-red">✗ Bez kukuřice</span>
+                                <span class="badge badge-red">✗ Bez umělých barviv</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Special Features -->
+                    <div class="section-card overflow-hidden">
+                        <div class="section-header bg-teal-50">
+                            <span class="section-icon bg-teal-100">✨</span>
+                            <h3 class="font-semibold">Speciální vlastnosti</h3>
+                        </div>
+                        <div class="p-5">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="feature-chip active">✓ OPTIDIGEST formula</span>
+                                <span class="feature-chip active">✓ Prebiotika</span>
+                                <span class="feature-chip active">✓ Vysoce stravitelné</span>
+                                <span class="feature-chip active">✓ Zdravá kůže a srst</span>
+                                <span class="feature-chip active">✓ Imunitní systém</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT: Content Blocks -->
+                <div class="space-y-6">
+                    <h2 class="text-xl font-bold flex items-center gap-2">📝 Obsahové bloky</h2>
+
+                    <!-- About Product -->
+                    <div class="section-card overflow-hidden">
+                        <div class="section-header bg-gray-800 text-white">
+                            <span class="section-icon bg-gray-700 text-white">📋</span>
+                            <h3 class="font-semibold">O produktu</h3>
+                        </div>
+                        <div class="p-5">
+                            <p class="leading-relaxed text-gray-700">
+                                <strong>Pro Plan Medium Sensitive Digestion</strong> je prémiové kompletní krmivo speciálně vyvinuté pro dospělé psy středních plemen (10-25 kg) s citlivým zažívacím traktem. Jedinečná OPTIDIGEST formule kombinuje vysoce stravitelné jehněčí maso jako hlavní zdroj bílkovin s prebiotiky pro podporu zdravé střevní mikroflóry.
+                            </p>
+                            <p class="leading-relaxed text-gray-700 mt-3">
+                                Receptura byla vyvinuta veterináři a nutričními specialisty Purina na základě 90 let výzkumu výživy psů. Bez pšenice, sóji a umělých barviv.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Customer Profiles -->
+                    <div class="section-card overflow-hidden">
+                        <div class="section-header bg-gray-800 text-white">
+                            <span class="section-icon bg-gray-700 text-white">👤</span>
+                            <h3 class="font-semibold">Zákaznické profily</h3>
+                        </div>
+                        <div class="p-5 space-y-3">
+                            <div class="flex items-start gap-3 p-3 bg-blue-50 rounded-lg">
+                                <span class="text-2xl">🏥</span>
+                                <div class="flex-1">
+                                    <div class="flex justify-between items-center">
+                                        <p class="font-medium">Majitelé psů s citlivým trávením</p>
+                                        <span class="badge badge-blue text-xs">35%</span>
+                                    </div>
+                                    <p class="text-sm text-gray-600">Pes má časté zažívací potíže, průjmy nebo zvracení. Hledají krmivo šetrné k trávení.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3 p-3 bg-green-50 rounded-lg">
+                                <span class="text-2xl">🎯</span>
+                                <div class="flex-1">
+                                    <div class="flex justify-between items-center">
+                                        <p class="font-medium">Zodpovědní chovatelé</p>
+                                        <span class="badge badge-green text-xs">28%</span>
+                                    </div>
+                                    <p class="text-sm text-gray-600">Chtějí pro psa kvalitní stravu podporující zdraví. Preferují ověřené značky.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3 p-3 bg-amber-50 rounded-lg">
+                                <span class="text-2xl">💰</span>
+                                <div class="flex-1">
+                                    <div class="flex justify-between items-center">
+                                        <p class="font-medium">Ekonomicky uvažující</p>
+                                        <span class="badge badge-amber text-xs">22%</span>
+                                    </div>
+                                    <p class="text-sm text-gray-600">Hledají nejlepší poměr cena/kvalita u většího balení.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- How It Works -->
+                    <div class="section-card overflow-hidden">
+                        <div class="section-header bg-gray-800 text-white">
+                            <span class="section-icon bg-gray-700 text-white">⚙️</span>
+                            <h3 class="font-semibold">Jak to funguje</h3>
+                        </div>
+                        <div class="p-5 space-y-4">
+                            <div>
+                                <h4 class="font-semibold text-teal-700 mb-2">🦠 OPTIDIGEST s prebiotiky</h4>
+                                <p class="text-gray-700 text-sm leading-relaxed">Speciální směs prebiotik podporuje růst prospěšných bakterií ve střevech psa. Zdravá střevní mikroflóra zlepšuje trávení, vstřebávání živin a posiluje imunitní systém.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-teal-700 mb-2">🐑 Jehněčí jako hlavní zdroj bílkovin</h4>
+                                <p class="text-gray-700 text-sm leading-relaxed">Jehněčí maso je vysoce stravitelné a vhodné i pro psy s potravinovými citlivostmi. Poskytuje esenciální aminokyseliny pro zdravé svaly a orgány.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-teal-700 mb-2">🌾 Snadno stravitelné sacharidy</h4>
+                                <p class="text-gray-700 text-sm leading-relaxed">Rýže jako primární zdroj sacharidů je šetrná k trávicímu traktu. Bez problémových ingrediencí jako pšenice, kukuřice a sója.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- What's Inside -->
+                    <div class="section-card overflow-hidden">
+                        <div class="section-header bg-gray-800 text-white">
+                            <span class="section-icon bg-gray-700 text-white">🔬</span>
+                            <h3 class="font-semibold">Co je uvnitř</h3>
+                        </div>
+                        <div class="p-5">
+                            <div class="grid grid-cols-2 gap-3">
+                                <div class="bg-gray-50 rounded-lg p-3">
+                                    <p class="text-xs text-gray-500">Hlavní bílkovina</p>
+                                    <p class="font-medium text-sm">Jehněčí (20%)</p>
+                                </div>
+                                <div class="bg-gray-50 rounded-lg p-3">
+                                    <p class="text-xs text-gray-500">Sacharidy</p>
+                                    <p class="font-medium text-sm">Rýže, kukuřičná mouka</p>
+                                </div>
+                                <div class="bg-gray-50 rounded-lg p-3">
+                                    <p class="text-xs text-gray-500">Prebiotika</p>
+                                    <p class="font-medium text-sm">Sušené kořeny čekanky</p>
+                                </div>
+                                <div class="bg-gray-50 rounded-lg p-3">
+                                    <p class="text-xs text-gray-500">Tuky</p>
+                                    <p class="font-medium text-sm">Živočišné tuky, rybí olej</p>
+                                </div>
+                                <div class="bg-gray-50 rounded-lg p-3">
+                                    <p class="text-xs text-gray-500">Vitamíny</p>
+                                    <p class="font-medium text-sm">A, D3, E, C + B komplex</p>
+                                </div>
+                                <div class="bg-gray-50 rounded-lg p-3">
+                                    <p class="text-xs text-gray-500">Minerály</p>
+                                    <p class="font-medium text-sm">Zinek, železo, měď, jod</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Differentiators -->
+                    <div class="section-card overflow-hidden">
+                        <div class="section-header bg-gray-800 text-white">
+                            <span class="section-icon bg-gray-700 text-white">🏆</span>
+                            <h3 class="font-semibold">Čím se odlišuje</h3>
+                        </div>
+                        <div class="p-5 space-y-4">
+                            <div class="flex gap-3 items-start">
+                                <div class="w-10 h-10 bg-teal-100 rounded-lg flex items-center justify-center text-lg flex-shrink-0">🔬</div>
+                                <div>
+                                    <p class="font-semibold text-sm">90 let výzkumu Purina</p>
+                                    <p class="text-xs text-gray-600">Receptura podložená vědeckým výzkumem a klinickými studiemi.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-3 items-start">
+                                <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center text-lg flex-shrink-0">🐑</div>
+                                <div>
+                                    <p class="font-semibold text-sm">Jehněčí jako #1 ingredience</p>
+                                    <p class="text-xs text-gray-600">Vysoce kvalitní, snadno stravitelný zdroj bílkovin na prvním místě.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-3 items-start">
+                                <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center text-lg flex-shrink-0">🦠</div>
+                                <div>
+                                    <p class="font-semibold text-sm">Patentovaná OPTIDIGEST formula</p>
+                                    <p class="text-xs text-gray-600">Unikátní kombinace prebiotik pro zdraví střev.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- How to Use -->
+                    <div class="section-card overflow-hidden">
+                        <div class="section-header bg-gray-800 text-white">
+                            <span class="section-icon bg-gray-700 text-white">📖</span>
+                            <h3 class="font-semibold">Jak krmit</h3>
+                        </div>
+                        <div class="p-5">
+                            <p class="text-sm text-gray-700 mb-4">Doporučená denní dávka pro dospělého psa středního plemene:</p>
+                            <div class="grid grid-cols-3 gap-2 text-center mb-4">
+                                <div class="bg-gray-50 rounded-lg p-3">
+                                    <p class="text-xs text-gray-500">10-15 kg</p>
+                                    <p class="font-bold">140-185 g</p>
+                                </div>
+                                <div class="bg-gray-50 rounded-lg p-3">
+                                    <p class="text-xs text-gray-500">15-20 kg</p>
+                                    <p class="font-bold">185-230 g</p>
+                                </div>
+                                <div class="bg-gray-50 rounded-lg p-3">
+                                    <p class="text-xs text-gray-500">20-25 kg</p>
+                                    <p class="font-bold">230-270 g</p>
+                                </div>
+                            </div>
+                            <ul class="text-xs text-gray-600 space-y-1">
+                                <li>• Rozdělte denní dávku do 2 porcí</li>
+                                <li>• Při přechodu na nové krmivo zvyšujte podíl postupně během 7 dnů</li>
+                                <li>• Zajistěte stálý přístup k čerstvé vodě</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+
+        <!-- ==================== TV ==================== -->
         <div id="product-tv" class="product-panel">
+            <!-- Product Hero -->
             <div class="section-card p-8 mb-8">
                 <div class="flex flex-col lg:flex-row gap-8">
                     <div class="lg:w-1/3">
                         <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 flex items-center justify-center aspect-square">
-                            <div class="text-center"><div class="text-8xl mb-4">📺</div><p class="text-gray-400 font-medium">Samsung QE85Q8F</p></div>
+                            <div class="text-center">
+                                <div class="text-8xl mb-4">📺</div>
+                                <p class="text-gray-400 font-medium">Samsung QE85Q8F</p>
+                            </div>
                         </div>
                     </div>
                     <div class="lg:w-2/3">
@@ -144,12 +725,16 @@
                             <span class="text-sm text-gray-500">4.8 (4 hodnocení)</span>
                         </div>
                         <h1 class="text-3xl font-bold mb-3">85" Samsung QE85Q8F – QLED 4K Smart TV</h1>
-                        <p class="text-gray-600 mb-4 leading-relaxed">Prémiová velkoformátová QLED televize s technologií Quantum Dot.</p>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            Prémiová velkoformátová QLED televize s technologií Quantum Dot pro živé barvy, lokálním stmíváním pro hlubokou černou, herním režimem s VRR pro PS5/Xbox a operačním systémem Tizen se všemi streamovacími aplikacemi.
+                        </p>
                         <div class="flex flex-wrap gap-2 mb-6">
                             <span class="badge badge-green">QLED 4K</span>
                             <span class="badge badge-blue">85" / 215 cm</span>
                             <span class="badge badge-purple">HDR10+</span>
                             <span class="badge badge-amber">Game Mode + VRR</span>
+                            <span class="badge badge-teal">Tizen OS</span>
+                            <span class="badge badge-pink">AirPlay 2</span>
                         </div>
                         <div class="flex items-baseline gap-3">
                             <span class="text-4xl font-bold alza-green-text">37 047 Kč</span>
@@ -159,22 +744,336 @@
                     </div>
                 </div>
             </div>
-            <p class="text-center text-gray-500 py-8">[Full TV content - see deployed version]</p>
+
+            <div class="grid lg:grid-cols-2 gap-8">
+                <!-- LEFT: Structured Data -->
+                <div class="space-y-6">
+                    <h2 class="text-xl font-bold flex items-center gap-2">📊 Strukturovaná data produktu</h2>
+
+                    <!-- Basic Info -->
+                    <div class="section-card overflow-hidden">
+                        <div class="section-header bg-amber-50">
+                            <span class="section-icon bg-amber-100">🏷️</span>
+                            <h3 class="font-semibold">Základní informace</h3>
+                        </div>
+                        <div class="divide-y divide-gray-100">
+                            <div class="param-row px-5 py-3 flex justify-between"><span class="text-gray-600">Výrobce</span><span class="font-medium">Samsung</span></div>
+                            <div class="param-row px-5 py-3 flex justify-between"><span class="text-gray-600">Model</span><span class="font-medium mono text-sm">QE85Q8F</span></div>
+                            <div class="param-row px-5 py-3 flex justify-between"><span class="text-gray-600">Modelový rok</span><span class="font-medium">2025</span></div>
+                            <div class="param-row px-5 py-3 flex justify-between"><span class="text-gray-600">Energetická třída</span><span class="badge badge-amber">E</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Display -->
+                    <div class="section-card overflow-hidden">
+                        <div class="section-header bg-blue-50">
+                            <span class="section-icon bg-blue-100">🖥️</span>
+                            <h3 class="font-semibold">Obraz a displej</h3>
+                        </div>
+                        <div class="divide-y divide-gray-100">
+                            <div class="param-row px-5 py-3 flex justify-between"><span class="text-gray-600">Úhlopříčka</span><span class="font-medium font-bold">85" (215 cm)</span></div>
+                            <div class="param-row px-5 py-3 flex justify-between items-center"><span class="text-gray-600">Rozlišení</span><span class="badge badge-blue">4K Ultra HD (3840×2160)</span></div>
+                            <div class="param-row px-5 py-3 flex justify-between items-center"><span class="text-gray-600">Technologie panelu</span><span class="badge badge-purple">QLED</span></div>
+                            <div class="param-row px-5 py-3 flex justify-between"><span class="text-gray-600">Obnovovací frekvence</span><span class="font-medium">50/60 Hz</span></div>
+                            <div class="param-row px-5 py-3 flex justify-between items-center"><span class="text-gray-600">Podsvícení</span><span class="badge badge-teal">Dual LED + Local Dimming</span></div>
+                            <div class="param-row px-5 py-3 flex justify-between"><span class="text-gray-600">Povrch</span><span class="font-medium">Lesklý</span></div>
+                        </div>
+                    </div>
+
+                    <!-- HDR -->
+                    <div class="section-card overflow-hidden">
+                        <div class="section-header bg-green-50">
+                            <span class="section-icon bg-green-100">🌈</span>
+                            <h3 class="font-semibold">HDR a barvy</h3>
+                        </div>
+                        <div class="p-5">
+                            <p class="text-sm text-gray-500 mb-3">Podporované HDR formáty:</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="badge badge-green">✓ HDR10</span>
+                                <span class="badge badge-green">✓ HDR10+</span>
+                                <span class="badge badge-green">✓ HLG</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Smart Features -->
+                    <div class="section-card overflow-hidden">
+                        <div class="section-header bg-purple-50">
+                            <span class="section-icon bg-purple-100">📱</span>
+                            <h3 class="font-semibold">Smart funkce</h3>
+                        </div>
+                        <div class="divide-y divide-gray-100">
+                            <div class="param-row px-5 py-3 flex justify-between items-center"><span class="text-gray-600">Operační systém</span><span class="badge badge-purple">Tizen</span></div>
+                            <div class="param-row px-5 py-3 flex justify-between items-center"><span class="text-gray-600">Hlasový asistent</span><span class="badge badge-blue">Bixby</span></div>
+                            <div class="param-row px-5 py-3 flex justify-between"><span class="text-gray-600">HbbTV</span><span class="font-medium">2.0.3</span></div>
+                        </div>
+                        <div class="px-5 py-4 border-t bg-gray-50">
+                            <p class="text-sm text-gray-500 mb-3">Dostupné aplikace:</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="feature-chip active">Netflix</span>
+                                <span class="feature-chip active">Disney+</span>
+                                <span class="feature-chip active">HBO Max</span>
+                                <span class="feature-chip active">Prime Video</span>
+                                <span class="feature-chip active">Voyo</span>
+                                <span class="feature-chip active">SledováníTV</span>
+                                <span class="feature-chip active">Kuki</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gaming -->
+                    <div class="section-card overflow-hidden">
+                        <div class="section-header bg-pink-50">
+                            <span class="section-icon bg-pink-100">🎮</span>
+                            <h3 class="font-semibold">Herní funkce</h3>
+                        </div>
+                        <div class="p-5">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="feature-chip active">✓ Game Mode</span>
+                                <span class="feature-chip active">✓ VRR</span>
+                                <span class="feature-chip active">✓ Ideal for PS5</span>
+                                <span class="feature-chip active">✓ HDMI 2.1</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Connectivity -->
+                    <div class="section-card overflow-hidden">
+                        <div class="section-header bg-teal-50">
+                            <span class="section-icon bg-teal-100">🔌</span>
+                            <h3 class="font-semibold">Konektivita</h3>
+                        </div>
+                        <div class="divide-y divide-gray-100">
+                            <div class="param-row px-5 py-3 flex justify-between"><span class="text-gray-600">HDMI</span><span class="font-medium">3× (HDMI 2.1)</span></div>
+                            <div class="param-row px-5 py-3 flex justify-between"><span class="text-gray-600">USB</span><span class="font-medium">2×</span></div>
+                            <div class="param-row px-5 py-3 flex justify-between"><span class="text-gray-600">LAN</span><span class="font-medium">Ano</span></div>
+                            <div class="param-row px-5 py-3 flex justify-between"><span class="text-gray-600">Wi-Fi</span><span class="font-medium">Wi-Fi 5</span></div>
+                            <div class="param-row px-5 py-3 flex justify-between"><span class="text-gray-600">Bluetooth</span><span class="font-medium">Ano</span></div>
+                            <div class="param-row px-5 py-3 flex justify-between"><span class="text-gray-600">AirPlay</span><span class="font-medium">AirPlay 2</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Physical -->
+                    <div class="section-card overflow-hidden">
+                        <div class="section-header bg-gray-100">
+                            <span class="section-icon bg-gray-200">📐</span>
+                            <h3 class="font-semibold">Rozměry a montáž</h3>
+                        </div>
+                        <div class="divide-y divide-gray-100">
+                            <div class="param-row px-5 py-3 flex justify-between"><span class="text-gray-600">VESA standard</span><span class="font-medium">600 × 400 mm</span></div>
+                            <div class="param-row px-5 py-3 flex justify-between"><span class="text-gray-600">Zvuk</span><span class="font-medium">2× 10W, Dolby Digital Plus</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT: Content Blocks -->
+                <div class="space-y-6">
+                    <h2 class="text-xl font-bold flex items-center gap-2">📝 Obsahové bloky</h2>
+
+                    <!-- About Product -->
+                    <div class="section-card overflow-hidden">
+                        <div class="section-header bg-gray-800 text-white">
+                            <span class="section-icon bg-gray-700 text-white">📋</span>
+                            <h3 class="font-semibold">O produktu</h3>
+                        </div>
+                        <div class="p-5">
+                            <p class="leading-relaxed text-gray-700">
+                                <strong>Samsung QE85Q8F</strong> je prémiová velkoformátová QLED televize, která přinese kinosálový zážitek přímo do vašeho obývacího pokoje. Díky technologii Quantum Dot nabízí živé, přesné barvy s objemem přes 1 miliardu odstínů.
+                            </p>
+                            <p class="leading-relaxed text-gray-700 mt-3">
+                                Lokální stmívání (Local Dimming) s Dual LED podsvícením zajišťuje hlubokou černou i ve scénách s vysokým kontrastem. Operační systém Tizen poskytuje přístup ke všem populárním streamovacím službám.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Customer Profiles -->
+                    <div class="section-card overflow-hidden">
+                        <div class="section-header bg-gray-800 text-white">
+                            <span class="section-icon bg-gray-700 text-white">👤</span>
+                            <h3 class="font-semibold">Zákaznické profily</h3>
+                        </div>
+                        <div class="p-5 space-y-3">
+                            <div class="flex items-start gap-3 p-3 bg-purple-50 rounded-lg">
+                                <span class="text-2xl">🎬</span>
+                                <div class="flex-1">
+                                    <div class="flex justify-between items-center">
+                                        <p class="font-medium">Filmový nadšenec</p>
+                                        <span class="badge badge-purple text-xs">32%</span>
+                                    </div>
+                                    <p class="text-sm text-gray-600">Chce kinosálový zážitek doma. Velká úhlopříčka a kvalita obrazu jsou prioritou.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3 p-3 bg-blue-50 rounded-lg">
+                                <span class="text-2xl">🎮</span>
+                                <div class="flex-1">
+                                    <div class="flex justify-between items-center">
+                                        <p class="font-medium">Hráč konzolových her</p>
+                                        <span class="badge badge-blue text-xs">25%</span>
+                                    </div>
+                                    <p class="text-sm text-gray-600">Potřebuje nízkou odezvu, VRR a kompatibilitu s PS5/Xbox. Game Mode je must-have.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3 p-3 bg-green-50 rounded-lg">
+                                <span class="text-2xl">👨‍👩‍👧‍👦</span>
+                                <div class="flex-1">
+                                    <div class="flex justify-between items-center">
+                                        <p class="font-medium">Rodina se společným obývákem</p>
+                                        <span class="badge badge-green text-xs">28%</span>
+                                    </div>
+                                    <p class="text-sm text-gray-600">Velký obývák vyžaduje velkou TV. Smart funkce využijí všichni členové rodiny.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ideal vs Not -->
+                    <div class="section-card overflow-hidden">
+                        <div class="section-header bg-gray-800 text-white">
+                            <span class="section-icon bg-gray-700 text-white">🎯</span>
+                            <h3 class="font-semibold">Komu se hodí</h3>
+                        </div>
+                        <div class="p-5 space-y-4">
+                            <div class="border-l-4 border-green-400 pl-4">
+                                <p class="font-semibold text-green-700 mb-2">✓ Ideální pro:</p>
+                                <ul class="space-y-1 text-gray-700 text-sm">
+                                    <li>• <strong>Velké obývací pokoje</strong> – pozorovací vzdálenost 3-4 metry</li>
+                                    <li>• <strong>Filmové večery</strong> – HDR10+ a QLED pro kinosálový zážitek</li>
+                                    <li>• <strong>Hráče konzolí</strong> – Game Mode, VRR, HDMI 2.1</li>
+                                    <li>• <strong>Streaming nadšence</strong> – všechny aplikace v Tizen OS</li>
+                                </ul>
+                            </div>
+                            <div class="border-l-4 border-amber-400 pl-4">
+                                <p class="font-semibold text-amber-700 mb-2">⚠ Méně vhodné pro:</p>
+                                <ul class="space-y-1 text-gray-700 text-sm">
+                                    <li>• <strong>Malé místnosti</strong> – 85" vyžaduje min. 3m odstup</li>
+                                    <li>• <strong>Ložnice</strong> – pro menší prostory zvažte 55-65"</li>
+                                    <li>• <strong>Úzké budgety</strong> – prémiová cena za prémiový zážitek</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- How It Works -->
+                    <div class="section-card overflow-hidden">
+                        <div class="section-header bg-gray-800 text-white">
+                            <span class="section-icon bg-gray-700 text-white">⚙️</span>
+                            <h3 class="font-semibold">Jak to funguje</h3>
+                        </div>
+                        <div class="p-5 space-y-4">
+                            <div>
+                                <h4 class="font-semibold text-blue-700 mb-2">💎 Quantum Dot (QLED)</h4>
+                                <p class="text-gray-700 text-sm leading-relaxed">Nanočástice Quantum Dot přeměňují světlo na čisté RGB barvy. Výsledkem je 100% pokrytí barevného prostoru DCI-P3 a přes miliardu odstínů.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-blue-700 mb-2">🌑 Local Dimming</h4>
+                                <p class="text-gray-700 text-sm leading-relaxed">Dual LED podsvícení s lokálním stmíváním zvyšuje jas ve světlých částech a ztmavuje pozadí. Výsledkem je vyšší kontrast a hlubší černá.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-blue-700 mb-2">🎮 Game Mode + VRR</h4>
+                                <p class="text-gray-700 text-sm leading-relaxed">Automatická detekce herní konzole přepne TV do režimu s nejnižší odezvou. VRR synchronizuje obnovovací frekvenci s výstupem konzole pro plynulý obraz bez trhání.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Differentiators -->
+                    <div class="section-card overflow-hidden">
+                        <div class="section-header bg-gray-800 text-white">
+                            <span class="section-icon bg-gray-700 text-white">🏆</span>
+                            <h3 class="font-semibold">Čím se odlišuje</h3>
+                        </div>
+                        <div class="p-5 space-y-4">
+                            <div class="flex gap-3 items-start">
+                                <div class="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center text-lg flex-shrink-0">📏</div>
+                                <div>
+                                    <p class="font-semibold text-sm">Impozantních 85 palců</p>
+                                    <p class="text-xs text-gray-600">Jedna z největších dostupných úhlopříček pro skutečný domácí kinosál.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-3 items-start">
+                                <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center text-lg flex-shrink-0">🎨</div>
+                                <div>
+                                    <p class="font-semibold text-sm">QLED s HDR10+</p>
+                                    <p class="text-xs text-gray-600">Dynamické HDR optimalizuje obraz scénu po scéně pro maximální dojem.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-3 items-start">
+                                <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center text-lg flex-shrink-0">🎮</div>
+                                <div>
+                                    <p class="font-semibold text-sm">Připraven na next-gen konzole</p>
+                                    <p class="text-xs text-gray-600">3× HDMI 2.1, VRR, Game Mode – plně využijete potenciál PS5/Xbox Series X.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-3 items-start">
+                                <div class="w-10 h-10 bg-teal-100 rounded-lg flex items-center justify-center text-lg flex-shrink-0">📱</div>
+                                <div>
+                                    <p class="font-semibold text-sm">AirPlay 2 pro Apple ekosystém</p>
+                                    <p class="text-xs text-gray-600">Bezdrátové zrcadlení z iPhone, iPad a Mac přímo na velkou obrazovku.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Safety -->
+                    <div class="section-card overflow-hidden">
+                        <div class="section-header bg-gray-800 text-white">
+                            <span class="section-icon bg-gray-700 text-white">📋</span>
+                            <h3 class="font-semibold">Instalace a záruka</h3>
+                        </div>
+                        <div class="p-5 space-y-3">
+                            <div class="bg-blue-50 border border-blue-100 rounded-lg p-3">
+                                <p class="font-semibold text-blue-700 text-sm mb-1">Montáž na zeď</p>
+                                <ul class="text-xs text-gray-700 space-y-1">
+                                    <li>• VESA standard: 600 × 400 mm</li>
+                                    <li>• Doporučený držák pro TV 60-100"</li>
+                                    <li>• Hmotnost: cca 35 kg – zvažte profesionální montáž</li>
+                                </ul>
+                            </div>
+                            <div class="bg-green-50 border border-green-100 rounded-lg p-3">
+                                <p class="font-semibold text-green-700 text-sm mb-1">Záruka</p>
+                                <ul class="text-xs text-gray-700 space-y-1">
+                                    <li>• Standardní záruka: <strong>24 měsíců</strong></li>
+                                    <li>• Možnost prodloužení: +3 roky za 5 410 Kč</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+
+        <!-- Stats Footer -->
         <div class="section-card p-6 mt-12">
             <div class="text-center mb-6">
                 <h3 class="font-bold text-lg">PDP Content System Statistics</h3>
                 <p class="text-sm text-gray-500">Powered by Outfindo Research × boost.space Integration</p>
             </div>
             <div class="grid grid-cols-2 md:grid-cols-5 gap-4 text-center">
-                <div><p class="text-3xl font-bold alza-green-text">3</p><p class="text-xs text-gray-500">Produkty</p></div>
-                <div><p class="text-3xl font-bold text-purple-600">47+</p><p class="text-xs text-gray-500">Parametrů / produkt</p></div>
-                <div><p class="text-3xl font-bold text-blue-600">7</p><p class="text-xs text-gray-500">Datových vrstev</p></div>
-                <div><p class="text-3xl font-bold text-amber-600">7</p><p class="text-xs text-gray-500">Obsahových bloků</p></div>
-                <div><p class="text-3xl font-bold text-teal-600">∞</p><p class="text-xs text-gray-500">LLM-ready</p></div>
+                <div>
+                    <p class="text-3xl font-bold alza-green-text">3</p>
+                    <p class="text-xs text-gray-500">Produkty</p>
+                </div>
+                <div>
+                    <p class="text-3xl font-bold text-purple-600">47+</p>
+                    <p class="text-xs text-gray-500">Parametrů / produkt</p>
+                </div>
+                <div>
+                    <p class="text-3xl font-bold text-blue-600">7</p>
+                    <p class="text-xs text-gray-500">Datových vrstev</p>
+                </div>
+                <div>
+                    <p class="text-3xl font-bold text-amber-600">7</p>
+                    <p class="text-xs text-gray-500">Obsahových bloků</p>
+                </div>
+                <div>
+                    <p class="text-3xl font-bold text-teal-600">∞</p>
+                    <p class="text-xs text-gray-500">LLM-ready</p>
+                </div>
             </div>
         </div>
+
     </main>
+
+    <!-- Footer -->
     <footer class="bg-white border-t mt-12 py-8">
         <div class="max-w-7xl mx-auto px-6 text-center text-gray-500">
             <div class="flex items-center justify-center gap-3 mb-3">
@@ -186,12 +1085,17 @@
             <p class="text-xs text-gray-400 mt-1">via boost.space connected database integration</p>
         </div>
     </footer>
+
     <script>
         function showProduct(product) {
+            // Hide all panels
             document.querySelectorAll('.product-panel').forEach(p => p.classList.remove('active'));
+            // Show selected
             document.getElementById('product-' + product).classList.add('active');
+            // Update tabs
             document.querySelectorAll('.tab-btn').forEach(t => t.classList.remove('active'));
             document.getElementById('tab-' + product).classList.add('active');
+            // Scroll to top
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     </script>
