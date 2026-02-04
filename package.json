@@ -1,0 +1,12 @@
+{
+  "name": "alza-pdp-lander",
+  "version": "1.0.0",
+  "description": "Alza × Outfindo PDP Content System Demo via boost.space",
+  "scripts": {
+    "start": "npx serve .",
+    "dev": "npx serve ."
+  },
+  "keywords": ["pdp", "alza", "outfindo", "ecommerce", "llm"],
+  "author": "Outfindo",
+  "license": "MIT"
+}
