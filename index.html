@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PDP Content System | Alza × Outfindo</title>
+    <title>PDP Content System | boost.space presents Outfindo to Alza</title>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -39,26 +39,80 @@
     </style>
 </head>
 <body class="bg-gray-50 outfindo-dark">
+    <!-- boost.space Platform Banner -->
+    <div class="bg-gradient-to-r from-violet-600 to-indigo-600 text-white">
+        <div class="max-w-7xl mx-auto px-6 py-3">
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-2 text-sm">
+                <div class="flex items-center gap-2">
+                    <span class="font-bold">boost.space</span>
+                    <span class="opacity-80">—</span>
+                </div>
+                <p class="text-center"><strong>Database for AI & Automations</strong> · Data Platform connecting your business, automation and AI</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Demo Disclaimer Banner -->
+    <div class="bg-amber-50 border-b border-amber-200">
+        <div class="max-w-7xl mx-auto px-6 py-3">
+            <div class="flex items-center justify-center gap-2 text-amber-800 text-sm">
+                <span class="text-lg">⚠️</span>
+                <p><strong>DEMO:</strong> Showing 3 of 21 prepared products. Full dataset in Excel export.</p>
+            </div>
+        </div>
+    </div>
+
     <!-- Header -->
     <header class="bg-white shadow-sm sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-6 py-4">
+            <!-- boost.space Presenting -->
+            <div class="flex items-center justify-center gap-3 mb-4">
+                <div class="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-violet-50 to-indigo-50 border border-violet-200 rounded-xl">
+                    <div class="w-6 h-6 bg-gradient-to-br from-violet-500 to-indigo-600 rounded-md flex items-center justify-center">
+                        <span class="text-white text-sm font-bold">B</span>
+                    </div>
+                    <span class="text-base font-semibold text-violet-700">boost.space</span>
+                </div>
+                <span class="text-gray-400 text-sm">presents to</span>
+                <div class="alza-green text-white px-4 py-2 rounded-xl font-bold text-sm">ALZA</div>
+            </div>
+            <!-- What Outfindo Delivers -->
             <div class="flex items-center justify-between">
                 <div class="flex items-center gap-3">
+                    <span class="text-sm text-gray-500">Connected service:</span>
                     <div class="outfindo-yellow px-3 py-1.5 rounded-lg font-bold text-sm">OUTFINDO</div>
-                    <span class="text-gray-300">×</span>
-                    <div class="alza-green text-white px-3 py-1.5 rounded-lg font-bold text-sm">ALZA</div>
-                    <span class="text-xs text-gray-400 ml-2 hidden sm:inline">via boost.space connected database integration</span>
                 </div>
                 <div class="text-right">
                     <h1 class="text-lg font-semibold">PDP Content System</h1>
-                    <p class="text-xs text-gray-500">Strukturovaná data + Obsahové bloky</p>
+                    <p class="text-xs text-gray-500">Strukturovaná data + Obsahové bloky pro LLM discoverability</p>
+                </div>
+            </div>
+            <!-- What boost.space enables for Alza -->
+            <div class="mt-4 pt-3 border-t border-gray-100 bg-gradient-to-r from-violet-50/50 to-indigo-50/50 -mx-6 px-6 py-3">
+                <div class="flex flex-wrap justify-center gap-4 text-xs">
+                    <div class="flex items-center gap-1.5">
+                        <span class="w-2 h-2 bg-blue-500 rounded-full"></span>
+                        <span class="text-gray-600">L0 Producer Data → Auto-fetched</span>
+                    </div>
+                    <div class="flex items-center gap-1.5">
+                        <span class="w-2 h-2 bg-purple-500 rounded-full"></span>
+                        <span class="text-gray-600">25-47 Blueprint Params → Extracted</span>
+                    </div>
+                    <div class="flex items-center gap-1.5">
+                        <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+                        <span class="text-gray-600">L1-L7 Enhanced → Enriched</span>
+                    </div>
+                    <div class="flex items-center gap-1.5">
+                        <span class="w-2 h-2 bg-amber-500 rounded-full"></span>
+                        <span class="text-gray-600">D1-D7 Descriptions → LLM-ready</span>
+                    </div>
                 </div>
             </div>
         </div>
     </header>
 
     <!-- Product Tabs -->
-    <div class="bg-white border-b sticky top-[72px] z-40">
+    <div class="bg-white border-b sticky top-[140px] z-40">
         <div class="max-w-7xl mx-auto px-6">
             <nav class="flex gap-1">
                 <button onclick="showProduct('washing')" id="tab-washing" class="tab-btn active py-4 px-5 text-sm">
@@ -417,14 +471,14 @@
                         </div>
                         <h1 class="text-3xl font-bold mb-3">Pro Plan Medium Sensitive Digestion</h1>
                         <p class="text-gray-600 mb-4 leading-relaxed">
-                            Prémiové granule s jehněčím pro dospělé psy středních plemen s citlivým trávením. Speciální OPTIDIGEST formule s prebiotiky pro zdravou střevní mikroflóru a snadné trávení. Bez pšenice a sóji.
+                            Prémiové granule s jehněčím pro dospělé psy středních plemen s citlivým trávením. Speciální formule s prebiotiky pro zdravou střevní mikroflóru a snadné trávení. Bez pšenice a sóji.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-6">
                             <span class="badge badge-green">Citlivé trávení</span>
                             <span class="badge badge-blue">Střední plemena 10-25 kg</span>
                             <span class="badge badge-purple">Jehněčí maso</span>
                             <span class="badge badge-amber">14 kg balení</span>
-                            <span class="badge badge-teal">OPTIDIGEST</span>
+                            <span class="badge badge-teal">Prebiotika</span>
                         </div>
                         <div class="flex items-baseline gap-3">
                             <span class="text-4xl font-bold alza-green-text">1 479 Kč</span>
@@ -477,7 +531,7 @@
                             <div class="param-row px-5 py-3 flex justify-between"><span class="text-gray-600">Bílkoviny</span><span class="font-medium font-bold">26%</span></div>
                             <div class="param-row px-5 py-3 flex justify-between"><span class="text-gray-600">Tuky</span><span class="font-medium">16%</span></div>
                             <div class="param-row px-5 py-3 flex justify-between"><span class="text-gray-600">Vláknina</span><span class="font-medium">3%</span></div>
-                            <div class="param-row px-5 py-3 flex justify-between"><span class="text-gray-600">Popel</span><span class="font-medium">7.5%</span></div>
+                            <div class="param-row px-5 py-3 flex justify-between"><span class="text-gray-600">Popel <span class="text-xs text-gray-400">(minerály)</span></span><span class="font-medium">7.5%</span></div>
                             <div class="param-row px-5 py-3 flex justify-between"><span class="text-gray-600">Omega-3</span><span class="font-medium">0.3%</span></div>
                             <div class="param-row px-5 py-3 flex justify-between"><span class="text-gray-600">Omega-6</span><span class="font-medium">2.0%</span></div>
                         </div>
@@ -513,7 +567,7 @@
                         </div>
                         <div class="p-5">
                             <div class="flex flex-wrap gap-2">
-                                <span class="feature-chip active">✓ OPTIDIGEST formula</span>
+                                <span class="feature-chip active">✓ Prebiotická formule</span>
                                 <span class="feature-chip active">✓ Prebiotika</span>
                                 <span class="feature-chip active">✓ Vysoce stravitelné</span>
                                 <span class="feature-chip active">✓ Zdravá kůže a srst</span>
@@ -535,7 +589,7 @@
                         </div>
                         <div class="p-5">
                             <p class="leading-relaxed text-gray-700">
-                                <strong>Pro Plan Medium Sensitive Digestion</strong> je prémiové kompletní krmivo speciálně vyvinuté pro dospělé psy středních plemen (10-25 kg) s citlivým zažívacím traktem. Jedinečná OPTIDIGEST formule kombinuje vysoce stravitelné jehněčí maso jako hlavní zdroj bílkovin s prebiotiky pro podporu zdravé střevní mikroflóry.
+                                <strong>Pro Plan Medium Sensitive Digestion</strong> je prémiové kompletní krmivo speciálně vyvinuté pro dospělé psy středních plemen (10-25 kg) s citlivým zažívacím traktem. Formule kombinuje vysoce stravitelné jehněčí maso jako hlavní zdroj bílkovin s prebiotiky pro podporu zdravé střevní mikroflóry.
                             </p>
                             <p class="leading-relaxed text-gray-700 mt-3">
                                 Receptura byla vyvinuta veterináři a nutričními specialisty Purina na základě 90 let výzkumu výživy psů. Bez pšenice, sóji a umělých barviv.
@@ -591,7 +645,7 @@
                         </div>
                         <div class="p-5 space-y-4">
                             <div>
-                                <h4 class="font-semibold text-teal-700 mb-2">🦠 OPTIDIGEST s prebiotiky</h4>
+                                <h4 class="font-semibold text-teal-700 mb-2">🦠 Prebiotická formule</h4>
                                 <p class="text-gray-700 text-sm leading-relaxed">Speciální směs prebiotik podporuje růst prospěšných bakterií ve střevech psa. Zdravá střevní mikroflóra zlepšuje trávení, vstřebávání živin a posiluje imunitní systém.</p>
                             </div>
                             <div>
@@ -665,8 +719,8 @@
                             <div class="flex gap-3 items-start">
                                 <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center text-lg flex-shrink-0">🦠</div>
                                 <div>
-                                    <p class="font-semibold text-sm">Patentovaná OPTIDIGEST formula</p>
-                                    <p class="text-xs text-gray-600">Unikátní kombinace prebiotik pro zdraví střev.</p>
+                                    <p class="font-semibold text-sm">Prebiotika pro zdravé trávení</p>
+                                    <p class="text-xs text-gray-600">Speciální kombinace prebiotik pro zdraví střev a lepší vstřebávání živin.</p>
                                 </div>
                             </div>
                         </div>
@@ -735,6 +789,7 @@
                             <span class="badge badge-amber">Game Mode + VRR</span>
                             <span class="badge badge-teal">Tizen OS</span>
                             <span class="badge badge-pink">AirPlay 2</span>
+                            <span class="badge badge-purple">AI Vision</span>
                         </div>
                         <div class="flex items-baseline gap-3">
                             <span class="text-4xl font-bold alza-green-text">37 047 Kč</span>
@@ -817,6 +872,28 @@
                                 <span class="feature-chip active">Voyo</span>
                                 <span class="feature-chip active">SledováníTV</span>
                                 <span class="feature-chip active">Kuki</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- AI & Smart Features -->
+                    <div class="section-card overflow-hidden">
+                        <div class="section-header bg-violet-50">
+                            <span class="section-icon bg-violet-100">🧠</span>
+                            <h3 class="font-semibold">Inteligentní funkce (AI)</h3>
+                        </div>
+                        <div class="divide-y divide-gray-100">
+                            <div class="param-row px-5 py-3 flex justify-between items-center"><span class="text-gray-600">AI procesor</span><span class="badge badge-purple">4K Quantum Processor</span></div>
+                            <div class="param-row px-5 py-3 flex justify-between items-center"><span class="text-gray-600">AI upscaling</span><span class="badge badge-green">✓ Ano</span></div>
+                            <div class="param-row px-5 py-3 flex justify-between items-center"><span class="text-gray-600">Adaptivní zvuk</span><span class="badge badge-green">✓ Ano</span></div>
+                            <div class="param-row px-5 py-3 flex justify-between items-center"><span class="text-gray-600">Adaptivní obraz</span><span class="badge badge-green">✓ Ano</span></div>
+                        </div>
+                        <div class="px-5 py-4 border-t bg-gray-50">
+                            <p class="text-sm text-gray-500 mb-3">AI automaticky optimalizuje:</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="feature-chip active">✓ Jas podle místnosti</span>
+                                <span class="feature-chip active">✓ Zvuk podle scény</span>
+                                <span class="feature-chip active">✓ Upscaling na 4K</span>
                             </div>
                         </div>
                     </div>
@@ -975,6 +1052,32 @@
                         </div>
                     </div>
 
+                    <!-- AI Features Consumer Benefits -->
+                    <div class="section-card overflow-hidden">
+                        <div class="section-header bg-gray-800 text-white">
+                            <span class="section-icon bg-gray-700 text-white">🧠</span>
+                            <h3 class="font-semibold">Inteligentní funkce v praxi</h3>
+                        </div>
+                        <div class="p-5 space-y-4">
+                            <div>
+                                <h4 class="font-semibold text-violet-700 mb-2">📺 AI Upscaling – lepší obraz i ze starších zdrojů</h4>
+                                <p class="text-gray-700 text-sm leading-relaxed">Procesor analyzuje každý snímek a inteligentně doplňuje detaily. I obsah v nižším rozlišení (HD, Full HD) vypadá ostřeji a blíží se kvalitě 4K.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-violet-700 mb-2">🔊 Adaptivní zvuk – slyšíte vždy správně</h4>
+                                <p class="text-gray-700 text-sm leading-relaxed">TV rozpozná typ obsahu (film, sport, hudba) a automaticky upraví zvukový profil. Navíc analyzuje hluk v místnosti a přizpůsobí hlasitost dialogů.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-violet-700 mb-2">💡 Adaptivní jas – pohodlné sledování za každého světla</h4>
+                                <p class="text-gray-700 text-sm leading-relaxed">Senzory měří okolní osvětlení a automaticky upravují jas i kontrast. Ve dne jasný obraz, večer příjemně tlumený – bez nutnosti ručního nastavování.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-violet-700 mb-2">🎙️ Hlasové ovládání Bixby</h4>
+                                <p class="text-gray-700 text-sm leading-relaxed">Ovládejte TV hlasem – přepínejte kanály, spouštějte aplikace nebo hledejte obsah. Bixby rozumí přirozenému jazyku a zvládne i složitější příkazy.</p>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- Differentiators -->
                     <div class="section-card overflow-hidden">
                         <div class="section-header bg-gray-800 text-white">
@@ -1041,32 +1144,75 @@
             </div>
         </div>
 
-        <!-- Stats Footer -->
-        <div class="section-card p-6 mt-12">
-            <div class="text-center mb-6">
-                <h3 class="font-bold text-lg">PDP Content System Statistics</h3>
-                <p class="text-sm text-gray-500">Powered by Outfindo Research × boost.space Integration</p>
+        <!-- Data Flow Section -->
+        <div class="section-card p-8 mt-12">
+            <div class="text-center mb-8">
+                <h3 class="font-bold text-xl">boost.space Smart Database · Data Flow</h3>
+                <p class="text-sm text-gray-500 mt-2">How Alza gets enriched product data through the boost.space platform</p>
             </div>
-            <div class="grid grid-cols-2 md:grid-cols-5 gap-4 text-center">
+
+            <!-- Data Flow Diagram -->
+            <div class="flex flex-col md:flex-row items-center justify-center gap-4 mb-8">
+                <div class="bg-blue-50 border-2 border-blue-200 rounded-xl p-4 text-center w-full md:w-48">
+                    <div class="text-2xl mb-2">🏭</div>
+                    <p class="font-bold text-blue-700">L0 Producer</p>
+                    <p class="text-xs text-gray-500 mt-1">Data from manufacturer websites</p>
+                </div>
+                <div class="text-2xl text-gray-300 rotate-90 md:rotate-0">→</div>
+                <div class="bg-purple-50 border-2 border-purple-200 rounded-xl p-4 text-center w-full md:w-48">
+                    <div class="text-2xl mb-2">📋</div>
+                    <p class="font-bold text-purple-700">Blueprint (MCP)</p>
+                    <p class="text-xs text-gray-500 mt-1">25-47 extraction parameters</p>
+                </div>
+                <div class="text-2xl text-gray-300 rotate-90 md:rotate-0">→</div>
+                <div class="bg-green-50 border-2 border-green-200 rounded-xl p-4 text-center w-full md:w-48">
+                    <div class="text-2xl mb-2">🧠</div>
+                    <p class="font-bold text-green-700">L1-L7 Enhanced</p>
+                    <p class="text-xs text-gray-500 mt-1">Customer intelligence layer</p>
+                </div>
+                <div class="text-2xl text-gray-300 rotate-90 md:rotate-0">→</div>
+                <div class="bg-amber-50 border-2 border-amber-200 rounded-xl p-4 text-center w-full md:w-48">
+                    <div class="text-2xl mb-2">📝</div>
+                    <p class="font-bold text-amber-700">D1-D7 Content</p>
+                    <p class="text-xs text-gray-500 mt-1">LLM-ready descriptions</p>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="grid grid-cols-2 md:grid-cols-6 gap-4 text-center border-t pt-6">
                 <div>
-                    <p class="text-3xl font-bold alza-green-text">3</p>
-                    <p class="text-xs text-gray-500">Produkty</p>
+                    <p class="text-3xl font-bold alza-green-text">21</p>
+                    <p class="text-xs text-gray-500">Products Ready</p>
                 </div>
                 <div>
-                    <p class="text-3xl font-bold text-purple-600">47+</p>
-                    <p class="text-xs text-gray-500">Parametrů / produkt</p>
+                    <p class="text-3xl font-bold text-blue-600">3</p>
+                    <p class="text-xs text-gray-500">Categories</p>
                 </div>
                 <div>
-                    <p class="text-3xl font-bold text-blue-600">7</p>
-                    <p class="text-xs text-gray-500">Datových vrstev</p>
+                    <p class="text-3xl font-bold text-purple-600">25-47</p>
+                    <p class="text-xs text-gray-500">Blueprint Params</p>
                 </div>
                 <div>
-                    <p class="text-3xl font-bold text-amber-600">7</p>
-                    <p class="text-xs text-gray-500">Obsahových bloků</p>
+                    <p class="text-3xl font-bold text-green-600">L1-L7</p>
+                    <p class="text-xs text-gray-500">Data Layers</p>
+                </div>
+                <div>
+                    <p class="text-3xl font-bold text-amber-600">D1-D7</p>
+                    <p class="text-xs text-gray-500">Content Blocks</p>
                 </div>
                 <div>
                     <p class="text-3xl font-bold text-teal-600">∞</p>
                     <p class="text-xs text-gray-500">LLM-ready</p>
+                </div>
+            </div>
+
+            <!-- Category Breakdown -->
+            <div class="mt-6 pt-4 border-t border-gray-100">
+                <p class="text-center text-sm text-gray-500 mb-3">Products by Category:</p>
+                <div class="flex flex-wrap justify-center gap-3">
+                    <span class="px-3 py-1.5 bg-gray-100 rounded-lg text-sm">🧺 <strong>7</strong> Pračky (47 BP params)</span>
+                    <span class="px-3 py-1.5 bg-gray-100 rounded-lg text-sm">🐕 <strong>7</strong> Krmivo (25 BP params)</span>
+                    <span class="px-3 py-1.5 bg-gray-100 rounded-lg text-sm">📺 <strong>7</strong> Televize (28 BP params)</span>
                 </div>
             </div>
         </div>
@@ -1074,15 +1220,51 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-white border-t mt-12 py-8">
-        <div class="max-w-7xl mx-auto px-6 text-center text-gray-500">
-            <div class="flex items-center justify-center gap-3 mb-3">
-                <span class="outfindo-yellow px-2 py-1 rounded font-bold text-xs outfindo-dark">OUTFINDO</span>
-                <span class="text-gray-300">×</span>
-                <span class="alza-green text-white px-2 py-1 rounded font-bold text-xs">ALZA</span>
+    <footer class="bg-gradient-to-b from-white to-violet-50 border-t mt-12 py-10">
+        <div class="max-w-7xl mx-auto px-6">
+            <!-- boost.space Value Prop Hero -->
+            <div class="text-center mb-8">
+                <div class="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-violet-600 to-indigo-600 rounded-full text-white mb-4">
+                    <span class="font-bold text-lg">boost.space</span>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-2">Database for AI & Automations</h3>
+                <p class="text-gray-600 max-w-2xl mx-auto">Data Platform where your data and tools connect together to create the <strong>missing link</strong> between your business, automation and AI</p>
             </div>
-            <p class="text-sm">PDP Content System – Strukturovaná data + Obsahové bloky pro LLM discoverability</p>
-            <p class="text-xs text-gray-400 mt-1">via boost.space connected database integration</p>
+
+            <!-- Service Flow -->
+            <div class="flex flex-wrap items-center justify-center gap-3 mb-8">
+                <div class="flex items-center gap-1.5 px-4 py-2 bg-gradient-to-r from-violet-100 to-indigo-100 border border-violet-300 rounded-xl">
+                    <div class="w-6 h-6 bg-gradient-to-br from-violet-500 to-indigo-600 rounded-md flex items-center justify-center">
+                        <span class="text-white text-sm font-bold">B</span>
+                    </div>
+                    <span class="font-bold text-violet-700">boost.space</span>
+                </div>
+                <span class="text-gray-400 font-medium">presents</span>
+                <span class="outfindo-yellow px-4 py-2 rounded-xl font-bold outfindo-dark">OUTFINDO</span>
+                <span class="text-gray-400 font-medium">to</span>
+                <span class="alza-green text-white px-4 py-2 rounded-xl font-bold">ALZA</span>
+            </div>
+
+            <!-- What boost.space delivers -->
+            <div class="grid md:grid-cols-3 gap-4 max-w-3xl mx-auto mb-8">
+                <div class="bg-white rounded-xl p-4 text-center border border-violet-100">
+                    <div class="text-2xl mb-2">🔗</div>
+                    <p class="font-semibold text-sm text-gray-700">Connected Data</p>
+                    <p class="text-xs text-gray-500">L0 producer data auto-fetched</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 text-center border border-violet-100">
+                    <div class="text-2xl mb-2">🧠</div>
+                    <p class="font-semibold text-sm text-gray-700">Smart Enrichment</p>
+                    <p class="text-xs text-gray-500">L1-L7 intelligence layers</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 text-center border border-violet-100">
+                    <div class="text-2xl mb-2">🤖</div>
+                    <p class="font-semibold text-sm text-gray-700">AI-Ready Output</p>
+                    <p class="text-xs text-gray-500">D1-D7 LLM descriptions</p>
+                </div>
+            </div>
+
+            <p class="text-center text-sm text-gray-500">PDP Content System – Strukturovaná data + Obsahové bloky pro LLM discoverability</p>
         </div>
     </footer>
 
